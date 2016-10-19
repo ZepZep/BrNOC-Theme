@@ -12,6 +12,20 @@ ApplicationWindow {
 
         anchors.fill: parent
 
+        Image {
+            id: brnenka
+            source: "brnenka2.png"
+
+            anchors.bottom: root.bottom
+            anchors.left: root.left
+
+            anchors.bottomMargin: 40
+            anchors.leftMargin: 40
+
+            fillMode: Image.PreserveAspectFit
+            width: clock.x - 80
+        }
+
         Text {
             id: textNext
             color: "white"
@@ -47,12 +61,20 @@ ApplicationWindow {
             horizontalAlignment:  TextInput.AlignHCenter
 
             text: ""
+            focus: true
+            cursorDelegate: Rectangle{}
+
+            Keys.onPressed: {
+                if ((event.key == Qt.Key_R) && (event.modifiers & Qt.ControlModifier))
+                    text = ""
+            }
         }
 
         Clock
         {
+            id: clock
             color: "white"
-            font.pointSize: root.height / 10
+            font.pointSize: root.width / 15
 
             anchors.bottom: root.bottom
             anchors.bottomMargin: root.height/20

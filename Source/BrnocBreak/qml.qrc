@@ -1,9 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>comp/main.qml</file>
-        <file>comp/Clock.qml</file>
-        <file>comp/background.jpg</file>
-        <file>comp/brnenka.png</file>
-        <file>comp/brnenka2.png</file>
-    </qresource>
-</RCC>

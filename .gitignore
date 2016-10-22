@@ -1,3 +1,6 @@
-Build
 *.pro.user*
-
+*.o
+moc_*
+ui_*
+.directory
+.qmake*

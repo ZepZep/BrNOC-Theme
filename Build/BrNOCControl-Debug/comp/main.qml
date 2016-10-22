@@ -6,11 +6,25 @@ ApplicationWindow {
     title: "BrNocBreak"
     visible: true
 
+//     signal setNextText(var s)
+//     onSetNextText: 
+//     {
+//         console.log("psi")
+//         //textNext.text = text
+//     }
+
+    function setNextText(s)
+    {
+        nextName.text = s
+        return "OK"
+    }
+    
     Image {
         id: root
         source: "background.jpg"
 
         anchors.fill: parent
+        
 
         Image {
             id: brnenka
@@ -59,6 +73,7 @@ ApplicationWindow {
             anchors.top: underline.bottom
             anchors.topMargin: 20
             horizontalAlignment:  TextInput.AlignHCenter
+            wrapMode: TextEdit.Wrap
 
             text: ""
             focus: true
@@ -81,4 +96,6 @@ ApplicationWindow {
             anchors.horizontalCenter: parent.horizontalCenter
         }
     }
+    
+    Component.onCompleted: console.log("psi stekaji")
 }
